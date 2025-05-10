@@ -2,21 +2,30 @@ t = int(input())
 
 for _ in range(t):
     n, k = map(int, input().split())
-    colors = input()
+    s = input()
     penalties = list(map(int, input().split()))
-    low = 0, high = max(penalties)
 
-    def canPaintWithMaxPenalty(maxPenalty: int) -> bool:
-        tries = k
-        for i in range(1, n):
-            pass
-        return True
+    def possible_complete(max_pen: int):
+        ops = 0
+        started = False
+        for i in range(n):
+            if s[i] == 'R':
+                if started and penalties[i] > max_pen:
+                    started = False
+            else:
+                if not started and penalties[i] > max_pen:
+                    started = True
+                    ops += 1
+
+        return ops <= k
+
+    low, high = 0, max(penalties)
 
     while low < high:
-        mid = (low + high) / 2
-        if canPaintWithMaxPenalty(mid):
+        mid = (low + high) // 2
+        if possible_complete(mid):
             high = mid
         else:
             low = mid + 1
+    
     print(low)
-
