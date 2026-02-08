@@ -1,0 +1,19 @@
+# Executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Binary files
+*.bin
+*.out
+*.app
+
+# Object files and libraries
+*.o
+*.obj
+*.a
+*.lib
+
+# Java class files
+*.class
