@@ -54,7 +54,7 @@ const ll MOD = 1e9 + 7;
 //     return res;
 // }
 
-void solve()
+void solve(int t)
 {
     ll n;
     cin >> n;
@@ -75,6 +75,6 @@ int main()
     int t;
     std::cin >> t;
     while (t--)
-        solve();
+        solve(t);
     return 0;
 }
