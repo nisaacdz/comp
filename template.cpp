@@ -7,6 +7,17 @@ using namespace std;
 const char ENDL = '\n';
 const ll MOD = 1e9 + 7;
 
+// template <typename T, size_t N>
+// std::ostream& operator<<(std::ostream& os, const std::array<T, N>& v) {
+//     os << "[";
+//     for (size_t i = 0; i < N; ++i) {
+//         os << v[i];
+//         if (i < N - 1) os << ", ";
+//     }
+//     os << "]";
+//     return os;
+// }
+
 // template <typename T>
 // std::ostream& operator<<(std::ostream& os, const std::vector<T>& v) {
 //     os << "[";
